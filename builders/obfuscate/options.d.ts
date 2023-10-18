@@ -1,4 +1,4 @@
-import { IOptions } from "javascript-obfuscator/src/interfaces/options/IOptions";
+import { IOptions } from 'javascript-obfuscator/typings/src/interfaces/options/IOptions';
 
 interface ObfuscateCommandOptions extends IOptions {
   /**

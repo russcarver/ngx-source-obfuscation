@@ -12,19 +12,20 @@ Angular Builder CLI which integrates the javascript-obfuscation project into ang
 
 #### Yarn
 ```
-yarn add -D @srag/ngx-source-obfuscation
+yarn add -D @rcarver/ngx-source-obfuscation
 ```
 
 #### Npm
 ```
-npm i -D @srag/ngx-source-obfuscation
+npm i -D @rcarver/ngx-source-obfuscation
 ```
 
 #### Version Table
-| Version  |      Angular      |
-|----------|:-----------------:|
-| ^1.0.0   |  8 |
-| ^2.0.0   |  9 |
+| Version | Angular |
+|---------|:-------:|
+| ^1.0.0  |    8    |
+| ^2.0.0  |    9    |
+| ^16.0.0 |   16    |
 
 #### Angular Setup
 Create a target in your `angular.json` file. Like the one shown bellow.
@@ -34,27 +35,29 @@ Other targets like `lint` or `build` are located in the same place.
 project! The *default* parameters are most likely *not* what you *want*. 
 
 ```json
-"obfuscate": {
-        "builder": "@srag/ngx-source-obfuscation:obfuscate",
-        "options": {
-            "files": [
-                {
-                    "glob": "main*.js",
-                    "input": "www",
-                    "output": "www"
-                }
-            ],
-            "sourceMap": true,
-            "sourceMapMode":"separate"
-        },
-        "configurations": {
-            "production": {
-                "debugProtection": true,
-                "debugProtectionInterval": true,
-                "sourceMap": false
-            }
+{
+  "obfuscate": {
+    "builder": "@rcarver/ngx-source-obfuscation:obfuscate",
+    "options": {
+      "files": [
+        {
+          "glob": "main*.js",
+          "input": "www",
+          "output": "www"
         }
+      ],
+      "sourceMap": true,
+      "sourceMapMode": "separate"
+    },
+    "configurations": {
+      "production": {
+        "debugProtection": true,
+        "debugProtectionInterval": true,
+        "sourceMap": false
+      }
     }
+  }
+}
 ```
 
 A Live Demo of the obfuscation library <https://obfuscator.io/> is provided by the author of the library.
@@ -95,13 +98,12 @@ npx ng run app:obfuscate:production
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/studer-raimann/ngx-source-obfuscation/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/russcarver/ngx-source-obfuscation/tags). 
 
 ## Authors
 
 * **Nicolas Schäfli** - *Initial work* - [d3r1w](https://github.com/d3r1w)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Russ Carver** - *Angular 16 upgrade* - [russcarver](https://github.com/russcarver)
 
 ## Acknowledgments
 
@@ -111,7 +113,7 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 This project is licensed under the GPL-v3 License - see the [LICENSE.md](LICENSE.md) file for details
 
-@srag/ngx-source-obfuscation Copyright (C) 2020 studer-raimann.ch
+@russcarver/ngx-source-obfuscation Copyright (C) 2023
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

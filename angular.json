@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false,
+    "schematicCollections": [ "@angular-eslint/schematics" ]
+  },
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-source-obfuscation": {
+      "root": "",
+      "sourceRoot": "builders",
+      "projectType": "application",
+      "architect": {
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "**/*.ts"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "version": 1
+}

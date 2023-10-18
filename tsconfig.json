@@ -14,18 +14,9 @@
       "node_modules/@types"
     ],
     "lib": [
-      "es2018"
+      "es2022"
     ],
-    "allowSyntheticDefaultImports": true,
-      // paths are relative to `baseUrl` path.
-      "paths": {
-          "@angular-devkit/*": [
-              "./node_modules/@angular-devkit/*"
-          ],
-          "rxjs": [
-              "./node_modules/rxjs"
-          ]
-      }
+    "allowSyntheticDefaultImports": true
   },
   "include": ["builders/**/*.ts"]
 }
