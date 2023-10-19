@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Obfuscate command.
 - Source code transfer (obfuscation -> angular)
 
-[16.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/master...v16.0.0
+[16.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v2.0.0...v16.0.0
 [2.0.0]: https://github.com/studer-raimann/ngx-source-obfuscation/compare/v1.0.1...v2.0.0
 [1.0.1]: https://github.com/studer-raimann/ngx-source-obfuscation/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/studer-raimann/ngx-source-obfuscation/releases/tag/v1.0.0
