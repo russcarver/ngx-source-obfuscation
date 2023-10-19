@@ -2,7 +2,7 @@
     "name": "@russcarver/ngx-source-obfuscation",
     "version": "16.0.0",
     "license": "GPL-3.0-or-later",
-    "author": "Russ Carver",
+    "author": "Russ Carver <russcarverg@gmail.com>",
     "repository": {
         "type": "git",
         "url": "https://github.com/russcarver/ngx-source-obfuscation"
