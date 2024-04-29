@@ -25,7 +25,7 @@ async function commandBuilder(options: ObfuscateCommandOptions & JsonObject,
   try {
     context.reportStatus('Obfuscate angular application.');
     await Promise.all(options.files.map((jsFiles: JsFiles) => obfuscateJsFiles(context, options, jsFiles)));
-    context.logger.info('Obfuscation finished.');
+    context.logger.info('\nObfuscation finished.');
     return { success: true };
   } catch (err) {
     if (typeof err === 'string') {
@@ -45,12 +45,15 @@ async function commandBuilder(options: ObfuscateCommandOptions & JsonObject,
 async function obfuscateJsFiles(context: BuilderContext, options: ObfuscateCommandOptions & JsonObject,
                                 files: JsFiles): Promise<void> {
   const inputPath: string = join(context.currentDirectory, files.input);
+  context.logger.info(`Input Path: ${inputPath}`);
   const outputPath: string = join(context.currentDirectory, (await getBuildPath(context)), files.output);
+  context.logger.info(`Output Path: ${outputPath}\n`);
+
   for await (const item of readdir(inputPath, { depth: 30, fileFilter: files.glob, type: 'files' })) {
     if (processedFiles.has(item.fullPath)) {
       continue;
     }
-    context.logger.info(`Obfuscate: ${item.fullPath}`);
+    context.logger.info(`Obfuscating: ${item.fullPath}`);
     const result: ObfuscationResult = obfuscate((await pReadFile(item.fullPath)).toString(), options);
     const jobs: Array<Promise<void>> = new Array<Promise<void>>(2);
     const sourceMapFile: string = `${item.fullPath}.map`;
