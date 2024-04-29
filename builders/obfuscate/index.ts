@@ -80,27 +80,27 @@ async function obfuscateJsFiles(context: BuilderContext, options: ObfuscateComma
 }
 
 async function getBuildPath(context: BuilderContext): Promise<string> {
-    const host: workspaces.WorkspaceHost = workspaces.createWorkspaceHost(new NodeJsSyncHost());
-    const workspace: { workspace: WorkspaceDefinition } =
-      await workspaces.readWorkspace(context.currentDirectory, host);
+  const host: workspaces.WorkspaceHost = workspaces.createWorkspaceHost(new NodeJsSyncHost());
+  const workspace: { workspace: WorkspaceDefinition } =
+    await workspaces.readWorkspace(context.currentDirectory, host);
 
-    const project: workspaces.ProjectDefinition = workspace.workspace.projects.get(context.target.project);
-    if (!project) {
-        throw new Error(`${context.target.project} not found.`);
-    }
+  const project: workspaces.ProjectDefinition = workspace.workspace.projects.get(context.target.project);
+  if (!project) {
+      throw new Error(`${context.target.project} not found.`);
+  }
 
-    const buildTarget: workspaces.TargetDefinition = project.targets.get('build');
-    if (!buildTarget) {
-        throw new Error('Build target does not exist!');
-    }
+  const buildTarget: workspaces.TargetDefinition = project.targets.get('build');
+  if (!buildTarget) {
+      throw new Error('Build target does not exist!');
+  }
 
-    const outputBasePath: JsonValue =
-      buildTarget.configurations?.production?.outputPath ?? buildTarget.options?.outputPath;
-    if (typeof outputBasePath !== 'string') {
-        throw new Error('Build target has no build directory configured!');
-    }
+  const outputBasePath: JsonValue =
+    buildTarget.configurations?.production?.outputPath ?? buildTarget.options?.outputPath;
+  if (typeof outputBasePath !== 'string') {
+      throw new Error('Build target has no build directory configured!');
+  }
 
-    return outputBasePath;
+  return outputBasePath;
 }
 
 export default createBuilder(commandBuilder);
