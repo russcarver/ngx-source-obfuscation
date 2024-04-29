@@ -83,21 +83,29 @@ async function getBuildPath(context: BuilderContext): Promise<string> {
   const host: workspaces.WorkspaceHost = workspaces.createWorkspaceHost(new NodeJsSyncHost());
   const workspace: { workspace: WorkspaceDefinition } =
     await workspaces.readWorkspace(context.currentDirectory, host);
-
   const project: workspaces.ProjectDefinition = workspace.workspace.projects.get(context.target.project);
+
   if (!project) {
-      throw new Error(`${context.target.project} not found.`);
+    throw new Error(`${context.target.project} not found.`);
   }
 
   const buildTarget: workspaces.TargetDefinition = project.targets.get('build');
   if (!buildTarget) {
-      throw new Error('Build target does not exist!');
+    throw new Error('Build target does not exist!');
   }
 
-  const outputBasePath: JsonValue =
+  let outputBasePath: JsonValue | JsonObject =
     buildTarget.configurations?.production?.outputPath ?? buildTarget.options?.outputPath;
+
+  if (!outputBasePath) {
+    throw new Error('Build target output base path directory not found!');
+  }
+
   if (typeof outputBasePath !== 'string') {
-      throw new Error('Build target has no build directory configured!');
+    outputBasePath = (outputBasePath as JsonObject).base;
+    if (outputBasePath === undefined || typeof outputBasePath !== 'string') {
+      throw new Error('Build target output base path directory not correctly configured!');
+    }
   }
 
   return outputBasePath;
