@@ -1,7 +1,7 @@
 {
   "name": "@russcarver/ngx-source-obfuscation",
   "description": "Integrates the javascript-obfuscation project into an angular project",
-  "version": "16.0.0",
+  "version": "17.0.0",
   "license": "GPL-3.0-or-later",
   "author": "Russ Carver <russcarverg@gmail.com>",
   "homepage": "https://github.com/russcarver/ngx-source-obfuscation#readme",
@@ -42,16 +42,16 @@
     "@angular-eslint/builder": "16.2.0",
     "@angular-eslint/eslint-plugin": "16.2.0",
     "@angular-eslint/schematics": "16.2.0",
-    "@types/node": "18.17.19",
-    "@typescript-eslint/eslint-plugin": "6.8.0",
-    "@typescript-eslint/parser": "6.8.0",
-    "eslint": "8.51.0",
-    "eslint-plugin-import": "2.28.1",
-    "eslint-plugin-jsdoc": "46.8.2",
+    "@types/node": "20.12.7",
+    "@typescript-eslint/eslint-plugin": "7.8.0",
+    "@typescript-eslint/parser": "7.8.0",
+    "eslint": "8.57.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-jsdoc": "48.2.3",
     "eslint-plugin-no-null": "1.0.2",
     "eslint-plugin-prefer-arrow": "1.2.3",
-    "eslint-plugin-unicorn": "48.0.1",
+    "eslint-plugin-unicorn": "52.0.0",
     "rxjs": "7.8.1",
-    "typescript": "5.1.6"
+    "typescript": "5.4.5"
   }
 }
