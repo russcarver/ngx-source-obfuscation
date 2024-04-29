@@ -61,6 +61,7 @@ project! The *default* parameters are most likely *not* what you *want*.
 }
 ```
 
+Files are obfuscated in-place (existing files are modified).
 A Live Demo of the obfuscation library <https://obfuscator.io/> is provided by the author of the library.
 A list of available configuration options can be found [here](https://github.com/javascript-obfuscator/javascript-obfuscator)
 
