@@ -4,6 +4,7 @@
     "baseUrl": ".",
     "sourceMap": true,
     "declaration": false,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "module": "CommonJS",
     "moduleResolution": "node",
