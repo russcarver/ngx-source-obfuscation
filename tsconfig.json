@@ -4,7 +4,6 @@
     "baseUrl": ".",
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": false,
     "experimentalDecorators": true,
     "module": "CommonJS",
     "moduleResolution": "node",
@@ -14,9 +13,8 @@
       "node_modules/@types"
     ],
     "lib": [
-      "es2022"
+      "es2023"
     ],
-    "allowSyntheticDefaultImports": true
   },
   "include": ["builders/**/*.ts"]
 }
