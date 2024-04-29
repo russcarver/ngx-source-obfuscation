@@ -20,6 +20,7 @@
   "main": "./builders/obfuscate/index.js",
   "scripts": {
     "build": "tsc",
+    "clean": "rimraf .nx/* && rimraf .yarn/* && rimraf yarn.lock && rimraf node_modules/*",
     "lint": "ng lint"
   },
   "private": false,
@@ -43,6 +44,7 @@
     "@angular-eslint/eslint-plugin": "17.3.0",
     "@angular-eslint/schematics": "17.3.0",
     "@types/node": "20.12.7",
+    "@types/node/ts4.8": "0.",
     "@typescript-eslint/eslint-plugin": "7.8.0",
     "@typescript-eslint/parser": "7.8.0",
     "eslint": "8.57.0",
@@ -51,6 +53,7 @@
     "eslint-plugin-no-null": "1.0.2",
     "eslint-plugin-prefer-arrow": "1.2.3",
     "eslint-plugin-unicorn": "52.0.0",
+    "rimraf": "5.0.5",
     "rxjs": "7.8.1",
     "typescript": "5.4.5"
   }
