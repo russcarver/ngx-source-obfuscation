@@ -26,6 +26,7 @@ npm i -D @rcarver/ngx-source-obfuscation
 | ^1.0.0  |    8    |
 | ^2.0.0  |    9    |
 | ^16.0.0 |   16    |
+| ^17.0.0 |   17    |
 
 #### Angular Setup
 Create a target in your `angular.json` file. Like the one shown bellow.
@@ -60,6 +61,7 @@ project! The *default* parameters are most likely *not* what you *want*.
 }
 ```
 
+Files are obfuscated in-place (existing files are modified).
 A Live Demo of the obfuscation library <https://obfuscator.io/> is provided by the author of the library.
 A list of available configuration options can be found [here](https://github.com/javascript-obfuscator/javascript-obfuscator)
 
@@ -103,7 +105,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Nicolas Schäfli** - *Initial work* - [d3r1w](https://github.com/d3r1w)
-* **Russ Carver** - *Angular 16 upgrade* - [russcarver](https://github.com/russcarver)
+* **Russ Carver** - *Angular 16 & 17 upgrades* - [russcarver](https://github.com/russcarver)
 
 ## Acknowledgments
 
@@ -113,7 +115,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 This project is licensed under the GPL-v3 License - see the [LICENSE.md](LICENSE.md) file for details
 
-@russcarver/ngx-source-obfuscation Copyright (C) 2023
+@russcarver/ngx-source-obfuscation Copyright (C) 2023-2024
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
