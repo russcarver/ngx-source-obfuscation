@@ -29,3 +29,4 @@ Once you are satisfied with all your changes, perform the following steps to pub
 1. Merge the PR into the `master` branch after review.
 1. Create a new Tag (https://github.com/russcarver/ngx-source-obfuscation/tags) from the `master` branch.
 1. Create a new Release (https://github.com/russcarver/ngx-source-obfuscation/releases) from the `master` branch.
+1. Publish to NPM by running `npm publish --tag=latest`
