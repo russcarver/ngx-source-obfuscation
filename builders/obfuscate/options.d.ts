@@ -8,7 +8,8 @@ interface ObfuscateCommandOptions extends IOptions {
 }
 
 interface JsFiles {
-  glob: string;
+  fileExtensions: string[];
+  filePatternsToExclude: string[];
   input: string;
   output: string;
 }

@@ -11,18 +11,38 @@
                 "type": "object",
                 "title": "The Items Schema",
                 "required": [
-                    "glob",
+                    "fileExtensions",
                     "input",
                     "output"
                 ],
                 "properties": {
-                    "glob": {
-                        "$id": "#/properties/files/items/properties/glob",
-                        "type": "string",
-                        "title": "The Glob Schema",
-                        "default": "**/*.js",
+                    "fileExtensions": {
+                        "$id": "#/properties/files/items/properties/fileExtensions",
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "minItems": 1,
+                        "uniqueItems": true,
+                        "title": "The File Extensions Schema",
+                        "default": "[js]",
                         "examples": [
-                            "**/*.js"
+                            "[\"js\"]"
+                        ],
+                        "pattern": "^(.+)$"
+                    },
+                    "filePatternsToExclude": {
+                        "$id": "#/properties/files/items/properties/filePatternsToExclude",
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true,
+                        "title": "The File Patterns to Exclude Schema",
+                        "default": "",
+                        "examples": [
+                            "[\"polyfills\"]"
                         ],
                         "pattern": "^(.+)$"
                     },

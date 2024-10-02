@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [18.0.0] - 2024-10-02
+### Added
+- Angular 18 support
+- BREAKING CHANGES:
+  1. Glob support has been removed due to it also being removed from the underlying implementation of `readdirp`.
+     * You must now use `fileExtensions` (string array, required) and, `filePatternsToExclude` (string array, optional).
+
 ## [17.0.0] - 2024-04-30
 ### Added
 - Angular 17 support
@@ -29,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Obfuscate command.
 - Source code transfer (obfuscation -> angular)
 
+[17.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v17.0.0...v18.0.0
 [17.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v16.0.0...v17.0.0
 [16.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v2.0.0...v16.0.0
 [2.0.0]: https://github.com/studer-raimann/ngx-source-obfuscation/compare/v1.0.1...v2.0.0
