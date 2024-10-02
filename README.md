@@ -12,12 +12,12 @@ Angular Builder CLI which integrates the javascript-obfuscation project into ang
 
 #### Yarn
 ```
-yarn add -D @rcarver/ngx-source-obfuscation
+yarn add -D @russcarver/ngx-source-obfuscation
 ```
 
 #### Npm
 ```
-npm i -D @rcarver/ngx-source-obfuscation
+npm i -D @russcarver/ngx-source-obfuscation
 ```
 
 #### Version Table
@@ -27,6 +27,7 @@ npm i -D @rcarver/ngx-source-obfuscation
 | ^2.0.0  |    9    |
 | ^16.0.0 |   16    |
 | ^17.0.0 |   17    |
+| ^18.0.0 |   18    |
 
 #### Angular Setup
 Create a target in your `angular.json` file. Like the one shown bellow.
@@ -35,20 +36,20 @@ Other targets like `lint` or `build` are located in the same place.
 *Important* make sure your levels of obfuscation and performance is suitable for your
 project! The *default* parameters are most likely *not* what you *want*. 
 
+Example:
 ```json
 {
   "obfuscate": {
-    "builder": "@rcarver/ngx-source-obfuscation:obfuscate",
+    "builder": "@russcarver/ngx-source-obfuscation:obfuscate",
     "options": {
       "files": [
         {
-          "glob": "main*.js",
-          "input": "www",
-          "output": "www"
+          "fileExtensions": ["js"],
+          "filePatternsToExclude": ["polyfills"],
+          "input": "dist",
+          "output": "."
         }
-      ],
-      "sourceMap": true,
-      "sourceMapMode": "separate"
+      ]
     },
     "configurations": {
       "production": {
@@ -61,7 +62,13 @@ project! The *default* parameters are most likely *not* what you *want*.
 }
 ```
 
-Files are obfuscated in-place (existing files are modified).
+#### Files options
+1. `fileExtensions` (required). This is an array of strings representing exact, case-insensitive file extensions of files you want to obfuscate.
+1. `filePatternsToExclude` (optional). This is an array of case-insensitive strings representing strings, that if found anywhere in the filename or extension (or combined aka: a full name.ext), will be excluded from obfuscation.
+1. `input` (required). This is the relative input path in which to search for files. It will search 30 nested directories deep from this path.
+1. `output` (required). This is the relative output path from the `input` path in which to place the obfuscated results.
+
+If the `output` path refers to the same directory as the `input` path, then files are obfuscated in-place (existing files are modified).
 A Live Demo of the obfuscation library <https://obfuscator.io/> is provided by the author of the library.
 A list of available configuration options can be found [here](https://github.com/javascript-obfuscator/javascript-obfuscator)
 
@@ -105,7 +112,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Nicolas Schäfli** - *Initial work* - [d3r1w](https://github.com/d3r1w)
-* **Russ Carver** - *Angular 16 & 17 upgrades* - [russcarver](https://github.com/russcarver)
+* **Russ Carver** - *Angular 16-19 upgrades* - [russcarver](https://github.com/russcarver)
 
 ## Acknowledgments
 

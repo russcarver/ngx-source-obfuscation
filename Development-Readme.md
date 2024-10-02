@@ -21,7 +21,8 @@ Run `npm run lint`or `yarn lint`
 1. Open an existing project that uses ngx-source-obfuscation (or create a new one with it as a dependency).
 1. Open the file `node_modules/@russcarver/ngx-source-obfuscation/builders/obfuscate/index.js` and replace its contents with those from a local build of ngx-source-obfuscation (same file).
 1. Open the file `node_modules/@russcarver/ngx-source-obfuscation/builders/obfuscate/index.js.map` and replace its contents with those from a local build of ngx-source-obfuscation (same file).
-2. Be sure to test with older versions of Angular (>= 16) to ensure backward compatibility.
+1. If changed, open the file `node_modules/@russcarver/ngx-source-obfuscation/builders/obfuscate/options.d.ts` and replace its contents with those from a local build of ngx-source-obfuscation (same file).
+1. If changed, open the file `node_modules/@russcarver/ngx-source-obfuscation/builders/obfuscate/schema.json` and replace its contents with those from a local build of ngx-source-obfuscation (same file).
 
 # Publishing
 Once you are satisfied with all your changes, perform the following steps to publish:

@@ -23,9 +23,32 @@
         "eslint-plugin-jsdoc",
         "eslint-plugin-no-null",
         "eslint-plugin-prefer-arrow",
+        "@stylistic",
         "unicorn"
       ],
       "rules": {
+        "@stylistic/member-delimiter-style": [
+          "error",
+          {
+            "multiline": {
+              "delimiter": "semi",
+              "requireLast": true
+            },
+            "singleline": {
+              "delimiter": "semi",
+              "requireLast": false
+            }
+          }
+        ],
+        "@stylistic/quotes": [
+          "error",
+          "single",
+          {
+            "avoidEscape": true
+          }
+        ],
+        "@stylistic/semi": ["error"],
+        "@stylistic/type-annotation-spacing": "error",
         "@typescript-eslint/ban-ts-comment": [
         "error",
           {
@@ -54,19 +77,6 @@
         "@typescript-eslint/ban-types": "off",
         "@typescript-eslint/consistent-type-assertions": "error",
         "@typescript-eslint/dot-notation": "error",
-        "@typescript-eslint/member-delimiter-style": [
-          "error",
-          {
-            "multiline": {
-              "delimiter": "semi",
-              "requireLast": true
-            },
-            "singleline": {
-              "delimiter": "semi",
-              "requireLast": false
-            }
-          }
-        ],
         "@typescript-eslint/member-ordering": [
           "error",
           {
@@ -128,14 +138,6 @@
         "@typescript-eslint/prefer-function-type": "error",
         "@typescript-eslint/prefer-namespace-keyword": "error",
         "@typescript-eslint/prefer-optional-chain": "error",
-        "@typescript-eslint/quotes": [
-          "error",
-          "single",
-          {
-            "avoidEscape": true
-          }
-        ],
-        "@typescript-eslint/semi": ["error"],
         "@typescript-eslint/triple-slash-reference": [
           "error",
           {
@@ -144,7 +146,6 @@
             "lib": "always"
           }
         ],
-        "@typescript-eslint/type-annotation-spacing": "error",
         "@typescript-eslint/typedef": [
           "error",
           {

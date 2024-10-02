@@ -6,7 +6,7 @@ import { mkdir, readFile, writeFile } from 'fs';
 import { obfuscate, ObfuscationResult } from 'javascript-obfuscator';
 import { transfer } from 'multi-stage-sourcemap';
 import { dirname, join, normalize } from 'path';
-import readdir from 'readdirp';
+import readdirip, { EntryInfo } from 'readdirp';
 import { promisify } from 'util';
 import { JsFiles, ObfuscateCommandOptions } from './options';
 
@@ -44,12 +44,29 @@ async function commandBuilder(options: ObfuscateCommandOptions & JsonObject,
 
 async function obfuscateJsFiles(context: BuilderContext, options: ObfuscateCommandOptions & JsonObject,
                                 files: JsFiles): Promise<void> {
+  context.logger.info(`Input Files Extensions: ${files.fileExtensions}`);
+  context.logger.info(`Input File Pattern Exclusions: ${files.filePatternsToExclude}`);
   const inputPath: string = join(context.currentDirectory, files.input);
   context.logger.info(`Input Path: ${inputPath}`);
   const outputPath: string = join(context.currentDirectory, (await getBuildPath(context)), files.output);
   context.logger.info(`Output Path: ${outputPath}\n`);
 
-  for await (const item of readdir(inputPath, { depth: 30, fileFilter: files.glob, type: 'files' })) {
+  let extensionMatches: boolean = false;
+  let excluded: boolean = false;
+  for await (const item of readdirip(
+    inputPath,
+    {
+      depth: 30,
+      fileFilter: (fileEntry: EntryInfo) => {
+        extensionMatches = files?.fileExtensions?.filter((ext: string): boolean =>
+          fileEntry.basename.toLowerCase().endsWith(`.${ext.toLowerCase()}`))?.length > 0;
+        excluded = files?.filePatternsToExclude?.filter((pattern: string): boolean =>
+          fileEntry.basename.toLowerCase().includes(pattern.toLowerCase()))?.length > 0;
+        return extensionMatches && !excluded;
+      },
+      type: 'files'
+    }
+  )) {
     if (processedFiles.has(item.fullPath)) {
       continue;
     }
