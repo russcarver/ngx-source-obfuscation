@@ -1,7 +1,7 @@
 {
   "name": "@russcarver/ngx-source-obfuscation",
   "description": "Integrates the javascript-obfuscation project into an angular project",
-  "version": "18.0.0",
+  "version": "19.0.0",
   "license": "GPL-3.0-or-later",
   "author": "Russ Carver <russcarverg@gmail.com>",
   "homepage": "https://github.com/russcarver/ngx-source-obfuscation#readme",
