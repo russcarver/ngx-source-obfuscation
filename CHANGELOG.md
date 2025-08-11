@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [16.0.0] - 2023-10-19
 ### Added
 - Angular 16 support
--
+
 ## [2.0.0] - 2020-03-28
 ### Added
 - Angular 9 support
@@ -40,7 +40,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Obfuscate command.
 - Source code transfer (obfuscation -> angular)
 
-[17.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v17.0.0...v18.0.0
+[19.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v18.0.0...v19.0.0
+[18.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v17.0.0...v18.0.0
 [17.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v16.0.0...v17.0.0
 [16.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v2.0.0...v16.0.0
 [2.0.0]: https://github.com/studer-raimann/ngx-source-obfuscation/compare/v1.0.1...v2.0.0
