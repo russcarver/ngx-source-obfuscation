@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [20.0.0] - 2025-08-11
+### Added
+- Angular 20 support
+
 ## [19.0.0] - 2025-07-11
 ### Added
 - Angular 19 support
@@ -40,6 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Obfuscate command.
 - Source code transfer (obfuscation -> angular)
 
+[20.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v19.0.0...v20.0.0
 [19.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v18.0.0...v19.0.0
 [18.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v17.0.0...v18.0.0
 [17.0.0]: https://github.com/russcarver/ngx-source-obfuscation/compare/v16.0.0...v17.0.0
