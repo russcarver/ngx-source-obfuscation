@@ -28,13 +28,15 @@ npm i -D @russcarver/ngx-source-obfuscation
 | ^16.0.0 |   16    |
 | ^17.0.0 |   17    |
 | ^18.0.0 |   18    |
+| ^19.0.0 |   19    |
+| ^20.0.0 |   20    |
 
 #### Angular Setup
 Create a target in your `angular.json` file. Like the one shown bellow.
 Other targets like `lint` or `build` are located in the same place.
 
 *Important* make sure your levels of obfuscation and performance is suitable for your
-project! The *default* parameters are most likely *not* what you *want*. 
+project! The *default* parameters are most likely *not* what you *want*.
 
 Example:
 ```json
@@ -107,12 +109,13 @@ npx ng run app:obfuscate:production
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/russcarver/ngx-source-obfuscation/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/russcarver/ngx-source-obfuscation/tags).
 
 ## Authors
 
 * **Nicolas Schäfli** - *Initial work* - [d3r1w](https://github.com/d3r1w)
-* **Russ Carver** - *Angular 16-19 upgrades* - [russcarver](https://github.com/russcarver)
+* **Russ Carver** - *Angular 16-18 upgrades* - [russcarver](https://github.com/russcarver)
+* **Oleksandr Hutsulyak** - *Angular 19-20 upgrades* - [kamilius](https://github.com/kamilius)
 
 ## Acknowledgments
 
