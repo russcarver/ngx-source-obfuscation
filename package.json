@@ -1,7 +1,7 @@
 {
   "name": "@russcarver/ngx-source-obfuscation",
   "description": "Integrates the javascript-obfuscation project into an angular project",
-  "version": "18.0.0",
+  "version": "19.0.0",
   "license": "GPL-3.0-or-later",
   "author": "Russ Carver <russcarverg@gmail.com>",
   "homepage": "https://github.com/russcarver/ngx-source-obfuscation#readme",
@@ -31,18 +31,18 @@
     "tslib": "2.7.0"
   },
   "peerDependencies": {
-    "@angular-devkit/architect": ">=0.1500.0 <=0.1700.0",
-    "@angular-devkit/core": "^15.0.0 || ^17.0.0",
-    "rxjs": "7.8.1"
+    "@angular-devkit/architect": ">=0.1500.0 <=0.2000.0",
+    "@angular-devkit/core": "19.2.15",
+    "rxjs": "7.8.2"
   },
   "devDependencies": {
-    "@angular/cli": "18.2.6",
-    "@angular-devkit/architect": "0.1802.6",
-    "@angular-devkit/build-angular": "18.2.6",
-    "@angular-devkit/core": "18.2.6",
-    "@angular-eslint/builder": "18.3.1",
-    "@angular-eslint/eslint-plugin": "18.3.1",
-    "@angular-eslint/schematics": "18.3.1",
+    "@angular/cli": "19.2.15",
+    "@angular-devkit/architect": "0.1902.15",
+    "@angular-devkit/build-angular": "19.2.15",
+    "@angular-devkit/core": "19.2.15",
+    "@angular-eslint/builder": "19.8.1",
+    "@angular-eslint/eslint-plugin": "19.8.1",
+    "@angular-eslint/schematics": "19.8.1",
     "@stylistic/eslint-plugin": "2.8.0",
     "@types/node": "22.7.4",
     "@typescript-eslint/eslint-plugin": "8.8.0",
@@ -54,7 +54,7 @@
     "eslint-plugin-prefer-arrow": "1.2.3",
     "eslint-plugin-unicorn": "55.0.0",
     "rimraf": "6.0.1",
-    "rxjs": "7.8.1",
-    "typescript": "5.5.4"
+    "rxjs": "7.8.2",
+    "typescript": "5.8.3"
   }
 }
