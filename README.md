@@ -29,6 +29,7 @@ npm i -D @russcarver/ngx-source-obfuscation
 | ^17.0.0 |   17    |
 | ^18.0.0 |   18    |
 | ^19.0.0 |   19    |
+| ^20.0.0 |   20    |
 
 #### Angular Setup
 Create a target in your `angular.json` file. Like the one shown bellow.
@@ -113,7 +114,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Nicolas Schäfli** - *Initial work* - [d3r1w](https://github.com/d3r1w)
-* **Russ Carver** - *Angular 16-19 upgrades* - [russcarver](https://github.com/russcarver)
+* **Russ Carver** - *Angular 16-18 upgrades* - [russcarver](https://github.com/russcarver)
+* **Oleksandr Hutsulyak** - *Angular 19-20 upgrades* - [kamilius](https://github.com/kamilius)
 
 ## Acknowledgments
 
