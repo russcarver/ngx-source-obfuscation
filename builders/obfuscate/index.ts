@@ -9,6 +9,8 @@ import { dirname, join, normalize } from 'path';
 import readdirip, { EntryInfo } from 'readdirp';
 import { promisify } from 'util';
 import { JsFiles, ObfuscateCommandOptions } from './options';
+import { Buffer } from 'buffer';
+import { URL } from 'url';
 
 const pReadFile: (readFile) => Promise<unknown> = promisify(readFile);
 const pWriteFile: (
