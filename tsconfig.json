@@ -2,20 +2,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": ".",
-    "sourceMap": true,
     "declaration": false,
     "esModuleInterop": true,
     "experimentalDecorators": true,
+    "importHelpers": true,
+    "lib": ["es2024"],
     "module": "CommonJS",
     "moduleResolution": "node",
-    "importHelpers": true,
+    "sourceMap": true,
     "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2023"
-    ],
+    "typeRoots": ["node_modules/@types"]
   },
   "include": ["builders/**/*.ts"]
 }

@@ -1,7 +1,7 @@
 {
   "name": "@russcarver/ngx-source-obfuscation",
   "description": "Integrates the javascript-obfuscation project into an angular project",
-  "version": "19.0.0",
+  "version": "20.0.0",
   "license": "GPL-3.0-or-later",
   "author": "Russ Carver <russcarverg@gmail.com>",
   "homepage": "https://github.com/russcarver/ngx-source-obfuscation#readme",
@@ -20,41 +20,37 @@
   "main": "./builders/obfuscate/index.js",
   "scripts": {
     "build": "tsc",
-    "clean": "rimraf .nx/* && rimraf .yarn/* && rimraf yarn.lock && rimraf node_modules/*",
-    "lint": "ng lint"
+    "biome:check": "biome check .",
+    "biome:format": "biome format .",
+    "biome:lint": "biome lint .",
+    "clean": "rimraf .nx/* && rimraf .yarn/* && rimraf yarn.lock && rimraf node_modules/*"
   },
   "private": false,
   "dependencies": {
-    "javascript-obfuscator": "4.1.1",
+    "javascript-obfuscator": "5.1.0",
     "multi-stage-sourcemap": "0.3.1",
-    "readdirp": "4.0.1",
-    "tslib": "2.7.0"
+    "readdirp": "5.0.0",
+    "tslib": "2.8.1"
   },
   "peerDependencies": {
-    "@angular-devkit/architect": ">=0.1500.0 <=0.2000.0",
-    "@angular-devkit/core": "19.2.15",
+    "@angular-devkit/architect": ">=0.1500.0 <=0.2100.0",
+    "@angular-devkit/core": "20.3.13",
     "rxjs": "7.8.2"
   },
   "devDependencies": {
-    "@angular/cli": "19.2.15",
-    "@angular-devkit/architect": "0.1902.15",
-    "@angular-devkit/build-angular": "19.2.15",
-    "@angular-devkit/core": "19.2.15",
-    "@angular-eslint/builder": "19.8.1",
-    "@angular-eslint/eslint-plugin": "19.8.1",
-    "@angular-eslint/schematics": "19.8.1",
-    "@stylistic/eslint-plugin": "2.8.0",
-    "@types/node": "22.7.4",
-    "@typescript-eslint/eslint-plugin": "8.8.0",
-    "@typescript-eslint/parser": "8.8.0",
-    "eslint": "8.57.1",
-    "eslint-plugin-import": "2.30.0",
-    "eslint-plugin-jsdoc": "50.3.1",
-    "eslint-plugin-no-null": "1.0.2",
-    "eslint-plugin-prefer-arrow": "1.2.3",
-    "eslint-plugin-unicorn": "55.0.0",
-    "rimraf": "6.0.1",
+    "@angular/cli": "20.3.13",
+    "@angular-devkit/architect": "0.2003.13",
+    "@angular-devkit/build-angular": "20.3.13",
+    "@angular-devkit/core": "20.3.13",
+    "@types/node": "24.10.4",
+    "@biomejs/biome": "2.3.10",
+    "rimraf": "6.1.2",
     "rxjs": "7.8.2",
-    "typescript": "5.8.3"
-  }
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": "24.12.0",
+    "npm": "11.6.2"
+  },
+  "engineStrict": true
 }

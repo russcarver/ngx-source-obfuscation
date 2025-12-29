@@ -2,12 +2,15 @@ import { BuilderContext, BuilderOutput, createBuilder } from '@angular-devkit/ar
 import { JsonObject, JsonValue, workspaces } from '@angular-devkit/core';
 import { NodeJsSyncHost } from '@angular-devkit/core/node';
 import { WorkspaceDefinition } from '@angular-devkit/core/src/workspace/definitions';
-import { mkdir, readFile, writeFile } from 'fs';
 import { obfuscate, ObfuscationResult } from 'javascript-obfuscator';
 import { transfer } from 'multi-stage-sourcemap';
-import { dirname, join, normalize } from 'path';
+// biome-ignore lint/nursery/noUnresolvedImports: path is correct
+import { mkdir, readFile, writeFile } from 'node:fs';
+// biome-ignore lint/nursery/noUnresolvedImports: path is correct
+import { dirname, join, normalize } from 'node:path';
+// biome-ignore lint/nursery/noUnresolvedImports: path is correct
+import { promisify } from 'node:util';
 import readdirip, { EntryInfo } from 'readdirp';
-import { promisify } from 'util';
 import { JsFiles, ObfuscateCommandOptions } from './options';
 
 const pReadFile: (readFile) => Promise<unknown> = promisify(readFile);
@@ -79,6 +82,7 @@ async function obfuscateJsFiles(context: BuilderContext, options: ObfuscateComma
       try {
         context.logger.debug(`Transfer source map: ${sourceMapFile}`);
         const bMap: string = (await pReadFile(sourceMapFile)).toString();
+        // biome-ignore lint/style/useNamingConvention: "A" is its own word here
         const cToAMap: string = transfer({fromSourceMap: result.getSourceMap(), toSourceMap: bMap});
         jobs.push(pWriteFile(sourceMapFile, cToAMap));
       } catch (err) {
